@@ -1,14 +1,14 @@
 <template>
   <b-row id="footer" class="no-gutters my-3 pt-3">
-    <b-col md="6" class="text-left pb-3 pb-md-0">
-      <span v-for="link in links" :key="link.id" class="mr-4">
+    <b-col md="6" class="text-start pb-3 pb-md-0">
+      <span v-for="link in links" :key="link.id" class="me-4">
         <a :href="link.href">
           <!--suppress HtmlUnknownTag -->
-          <font-awesome-icon :icon="link.icon" class="mr-1" /> {{ link.name }}
+          <font-awesome-icon :icon="link.icon" class="me-1" /> {{ link.name }}
         </a>
       </span>
     </b-col>
-    <b-col md="6" class="text-right">
+    <b-col md="6" class="text-end">
       <p>Made by: Jakub Suchenek</p>
     </b-col>
   </b-row>
