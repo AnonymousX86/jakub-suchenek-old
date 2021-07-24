@@ -1,0 +1,70 @@
+<template>
+  <b-col lg="6" xl="4">
+    <div class="mb-2 image-wrapper">
+      <b-img-lazy
+        fluid
+        :src="photo.thumbnail"
+        blank-color="#777"
+        :alt="photo.description"
+        :title="photo.description"
+      />
+      <p class="expand-icon">
+        <a :href="photo.link">
+          <!--suppress HtmlUnknownTag -->
+          <font-awesome-icon :icon="previewIcon" />
+        </a>
+      </p>
+    </div>
+  </b-col>
+</template>
+
+<script lang="ts">
+import Vue from "vue"
+import { Photo } from "~/assets/interfaces/Custom"
+
+// noinspection JSUnusedGlobalSymbols
+export default Vue.extend({
+  name: "SinglePhoto",
+  props: {
+    photo: {
+      type: Object as () => Photo,
+      default() {
+        return {
+          description: "",
+          link: "",
+          thumbnail: "",
+          sizes: [ 0, 0 ],
+        }
+      },
+    },
+  },
+  data() {
+    return {
+      previewIcon: [ "fas", "expand" ],
+    }
+  },
+})
+</script>
+
+<style lang="sass" scoped>
+.image-wrapper
+  position: relative
+  &:hover > .expand-icon > a
+    transition-timing-function: ease-in
+    opacity: 0.5
+  .expand-icon
+    font-size: 5rem
+    text-align: center
+    position: absolute
+    top: calc(50% - 60px)
+    left: 0
+    display: inline-block
+    width: 100%
+    a
+      opacity: 0
+      color: #ffffff
+      transition: opacity 0.3s ease-out
+      &:hover
+        transition-timing-function: ease-in
+        opacity: 1
+</style>

@@ -1,0 +1,47 @@
+<template>
+  <div class="container">
+    <TheNavigation />
+    <Nuxt keep-alive class="text-left" />
+    <TheFooter />
+  </div>
+</template>
+
+<script>
+export default {
+  layout: "default",
+}
+</script>
+
+<style lang="sass">
+@import "~assets/sass/colors"
+
+body
+  background-color: $light
+  color: #121212
+  font-weight: 400
+  font-family: "Montserrat", sans-serif
+  text-align: center
+
+@media (prefers-color-scheme: dark)
+  body
+    background-color: #121212
+    color: #cccccc
+
+h2:first-letter
+  font-weight: 900
+  color: $primary
+
+h1
+  font-weight: 900
+  letter-spacing: 0.2rem
+
+h2,
+h3
+  font-weight: 700
+  letter-spacing: 0.1rem
+
+h4,
+h5,
+b
+  font-weight: 600
+</style>
