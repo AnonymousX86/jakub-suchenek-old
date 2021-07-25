@@ -20,25 +20,26 @@ export default Vue.extend({
   name: "Home",
   data() {
     let images: HomeImage[] = []
+    // noinspection SpellCheckingInspection
     images = [
       {
         id: 1,
         title: "Me",
-        link: "https://i.imgur.com/MIjOtmpm.webp",
+        imageId: "MIjOtmp",
         alt: "Author's selfie",
         text: "I'm young man with many interests. As you can see, biggest are programming and photography. I'm interested in more things, but these two are the easiest to show to the World.",
       },
       {
         id: 2,
         title: "Mind",
-        link: "https://i.imgur.com/l7aWcEXm.webp",
+        imageId: "l7aWcEX",
         alt: "Coding",
         text: "In mid-school I've started to make my own, small BAT scripts. But that was to little for me. So I've decided to learn at first C++, then PHP, Python and JavaScript.",
       },
       {
         id: 3,
         title: "Mine",
-        link: "https://i.imgur.com/95nNQHTm.webp",
+        imageId: "95nNQHT",
         alt: "Photo of three strawberries",
         text: "Everyone love to look at beautiful photos. So I'm taking my own and I'm trying to make them as perfect as possible. I hope my photos will convince someone that the World itself is beautiful,",
       },

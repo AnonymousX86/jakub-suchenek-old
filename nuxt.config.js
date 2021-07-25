@@ -61,7 +61,7 @@ export default {
   modules: [ "bootstrap-vue/nuxt", "@nuxtjs/axios" ],
 
   axios: {
-    retry: true,
+    retry: { retries: 5 },
   },
 
   build: {},
@@ -105,7 +105,7 @@ export default {
   publicRuntimeConfig: {
     baseUrl:
       process.env.NODE_ENV === "production"
-        ? "http://jakub-suchenek.herokuapp.com"
+        ? "https://jakub-suchenek.herokuapp.com"
         : "http://localhost:3000",
   },
 }

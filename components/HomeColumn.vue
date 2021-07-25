@@ -5,7 +5,9 @@
       <b-img-lazy
         :id="'home-img-' + image.id"
         fluid-grow
-        :src="image.link"
+        :src="`https://i.imgur.com/${image.imageId}m.jpg`"
+        :srcset="srcset.join(', ')"
+        sizes="80vw"
         :alt="image.alt"
         blank-color="#777"
       />
@@ -17,6 +19,7 @@
 <script lang="ts">
 import Vue from "vue"
 import { HomeImage } from "~/assets/interfaces/Custom"
+import { hashToSrcset } from "~/assets/functions"
 
 // noinspection JSUnusedGlobalSymbols
 export default Vue.extend({
@@ -28,11 +31,16 @@ export default Vue.extend({
         return {
           id: 0,
           title: "Error",
-          link: "https://dummyimage.com/600x600/ccc/000&text=Dummy+image",
+          photoId: "removed",
           alt: "No image found.",
           text: "During rendering and error occurred.",
         }
       },
+    },
+  },
+  computed: {
+    srcset(): string[] {
+      return hashToSrcset(this.$props.image.imageId)
     },
   },
 })

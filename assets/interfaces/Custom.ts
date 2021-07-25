@@ -1,7 +1,7 @@
 export interface HomeImage {
   readonly id: number
   readonly title: string
-  readonly link: string
+  readonly imageId: string
   readonly alt: string
   readonly text: string
 }
