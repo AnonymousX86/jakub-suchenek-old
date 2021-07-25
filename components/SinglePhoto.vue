@@ -9,10 +9,10 @@
         :title="photo.description"
       />
       <p class="expand-icon">
-        <a :href="`${$config.baseUrl}/photo/${photo.id}`">
+        <nuxt-link :to="`/photo/${photo.id}`">
           <!--suppress HtmlUnknownTag -->
           <font-awesome-icon :icon="previewIcon" />
-        </a>
+        </nuxt-link>
       </p>
     </div>
   </b-col>
