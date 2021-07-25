@@ -29,6 +29,17 @@ export default {
 
   css: ["@/assets/scss/custom.scss"],
 
+  loading: {
+    color: "#3AAFA9",
+    height: "5px",
+  },
+
+  loadingIndicator: {
+    name: "circle",
+    color: "#3AAFA9",
+    background: "#CCCCCC",
+  },
+
   plugins: [],
 
   components: true,
