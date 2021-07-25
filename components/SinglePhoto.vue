@@ -3,7 +3,9 @@
     <div class="mb-4 px-3 image-wrapper">
       <b-img-lazy
         fluid-grow
-        :src="`https://i.imgur.com/${photo.id}m.webp`"
+        :src="`https://i.imgur.com/${photo.id}m.jpg`"
+        :srcset="srcset.join(', ')"
+        sizes="80vw"
         blank-color="#777"
         :alt="photo.description"
         :title="photo.description"
@@ -21,8 +23,8 @@
 <script lang="ts">
 import Vue from "vue"
 import { Photo } from "~/assets/interfaces/Custom"
+import { hashToSrcset } from "~/assets/functions"
 
-// noinspection JSUnusedGlobalSymbols
 export default Vue.extend({
   name: "SinglePhoto",
   props: {
@@ -41,6 +43,11 @@ export default Vue.extend({
       previewIcon: [ "fas", "expand" ],
     }
   },
+  computed: {
+    srcset(): string[] {
+      return hashToSrcset(this.photo.id)
+    }
+  }
 })
 </script>
 
