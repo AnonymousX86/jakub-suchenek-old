@@ -1,6 +1,6 @@
 <template>
-  <b-col lg="6" xl="4">
-    <div class="mb-4 px-3 image-wrapper">
+  <b-col lg="6" xl="4" class="p-0 mb-0">
+    <div class="image-wrapper">
       <b-img-lazy
         fluid-grow
         :src="`https://i.imgur.com/${photo.id}m.jpg`"
@@ -54,6 +54,11 @@ export default Vue.extend({
 <style lang="scss" scoped>
 .image-wrapper {
   position: relative;
+  padding: 40px;
+
+  img {
+    box-shadow: 3px 3px 20px #121212;
+  }
 
   &:hover > .expand-icon > a {
     transition-timing-function: ease-in;
@@ -79,6 +84,12 @@ export default Vue.extend({
         opacity: 1;
       }
     }
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  .image-wrapper > img {
+    box-shadow: 3px 3px 20px #000;
   }
 }
 </style>
