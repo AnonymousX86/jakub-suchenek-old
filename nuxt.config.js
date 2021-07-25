@@ -9,7 +9,9 @@ export default {
       { name: "viewport", content: "width=device-width, initial-scale=1" },
       { name: "author", content: "Jakub Suchenek" },
       { name: "owner", content: "Jakub Suchenek" },
+      { name: "copyright", content: "Jakub Suchenek" },
       { name: "reply-to", content: "jakub.suchenek.25@gmail.com" },
+      { name: "application-name", content: "Jakub Suchenek portfolio" },
       {
         hid: "description",
         name: "description",
