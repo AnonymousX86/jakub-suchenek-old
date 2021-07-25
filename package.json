@@ -9,7 +9,8 @@
     "generate": "nuxt generate",
     "lint:js": "eslint --ext \".js,.vue\" --ignore-path .gitignore .",
     "lint": "npm run lint:js",
-    "heroku-postbuild": "npm run build"
+    "migrator": "sass-migrator division **/*.scss",
+    "heroku-postbuild": "npm run migrator"
   },
   "dependencies": {
     "@fortawesome/free-brands-svg-icons": "^5.15.3",
@@ -35,6 +36,7 @@
     "eslint-config-prettier": "^8.3.0",
     "eslint-plugin-nuxt": "^2.0.0",
     "eslint-plugin-vue": "^7.12.1",
-    "prettier": "^2.3.2"
+    "prettier": "^2.3.2",
+    "sass-migrator": "^1.5.1"
   }
 }
