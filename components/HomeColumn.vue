@@ -48,7 +48,7 @@ export default Vue.extend({
     }
 
     &:hover > img {
-      transform: rotateY(-0.5deg);
+      transform: rotateY(-0.35deg);
     }
   }
 }
