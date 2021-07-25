@@ -1,10 +1,11 @@
 <template>
   <b-row no-gutters>
     <b-col cols="12">
+      <!--suppress JSUnresolvedVariable -->
       <b-img-lazy
         fluid-grow
         :src="`https://i.imgur.com/${hash}.webp`"
-        alt="Image doesn't exist!"
+        alt=""
         blank-color="#777777"
       />
     </b-col>
