@@ -23,6 +23,12 @@ body {
   text-align: center;
 }
 
+@media (prefers-color-scheme: dark) {
+  body {
+    background-color: #121212;
+    color: #cccccc;
+  }
+}
 h2:first-letter {
   font-weight: 900;
   color: colors.$primary;
