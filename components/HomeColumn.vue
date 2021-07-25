@@ -103,10 +103,12 @@ export default Vue.extend({
 })
 </script>
 
-<style lang="sass" scoped>
-.img-container
-  perspective: 30px
+<style lang="scss" scoped>
+.img-container {
+  perspective: 30px;
 
-  img
-    transition: transform 0.3s
+  img {
+    transition: transform 0.3s;
+  }
+}
 </style>

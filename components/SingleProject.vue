@@ -39,11 +39,12 @@ export default Vue.extend({
 })
 </script>
 
-<style lang="sass" scoped>
-@import "~assets/sass/colors"
+<style lang="scss" scoped>
+@use "~assets/scss/colors";
 
-.project
-  border-left: solid $accent 5px
-  background-color: #fafafa
-  color: #121212
+.project {
+  border-left: solid colors.$accent 5px;
+  background-color: #fafafa;
+  color: #121212;
+}
 </style>

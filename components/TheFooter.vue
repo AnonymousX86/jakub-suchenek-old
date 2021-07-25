@@ -47,24 +47,30 @@ export default Vue.extend({
 })
 </script>
 
-<style lang="sass" scoped>
-@import "~assets/sass/colors"
-@import "~assets/sass/hr-border"
+<style lang="scss" scoped>
+@use "~assets/scss/colors";
+@use "~assets/scss/hr-border" as border;
 
-#footer
-  border-top: $dark-border
+#footer {
+  border-top: border.$dark-border;
 
-  span
-    display: inline-block
+  span {
+    display: inline-block;
+  }
 
-  a
-    color: inherit
-    transition: color 0.3s ease-in-out
+  a {
+    color: inherit;
+    transition: color 0.3s ease-in-out;
 
-    &:hover
-      color: $primary
+    &:hover {
+      color: colors.$primary;
+    }
+  }
+}
 
-@media (prefers-color-scheme: dark)
-  #footer
-    border-top: $light-border
+@media (prefers-color-scheme: dark) {
+  #footer {
+    border-top: border.$light-border;
+  }
+}
 </style>

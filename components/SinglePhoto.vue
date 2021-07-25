@@ -46,25 +46,34 @@ export default Vue.extend({
 })
 </script>
 
-<style lang="sass" scoped>
-.image-wrapper
-  position: relative
-  &:hover > .expand-icon > a
-    transition-timing-function: ease-in
-    opacity: 0.5
-  .expand-icon
-    font-size: 5rem
-    text-align: center
-    position: absolute
-    top: calc(50% - 60px)
-    left: 0
-    display: inline-block
-    width: 100%
-    a
-      opacity: 0
-      color: #ffffff
-      transition: opacity 0.3s ease-out
-      &:hover
-        transition-timing-function: ease-in
-        opacity: 1
+<style lang="scss" scoped>
+.image-wrapper {
+  position: relative;
+
+  &:hover > .expand-icon > a {
+    transition-timing-function: ease-in;
+    opacity: 0.5;
+  }
+
+  .expand-icon {
+    font-size: 5rem;
+    text-align: center;
+    position: absolute;
+    top: calc(50% - 60px);
+    left: 0;
+    display: inline-block;
+    width: 100%;
+
+    a {
+      opacity: 0;
+      color: #ffffff;
+      transition: opacity 0.3s ease-out;
+
+      &:hover {
+        transition-timing-function: ease-in;
+        opacity: 1;
+      }
+    }
+  }
+}
 </style>
