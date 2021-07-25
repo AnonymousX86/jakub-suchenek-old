@@ -1,7 +1,7 @@
 <template>
   <b-container>
     <TheNavigation />
-    <Nuxt keep-alive class="text-start" />
+    <Nuxt keep-alive class="text-left" />
     <TheFooter />
   </b-container>
 </template>

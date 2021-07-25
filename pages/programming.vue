@@ -11,7 +11,7 @@
     <b-col v-else cols="12">
       <h2 class="mb-3">My projects</h2>
       <b-row no-gutters>
-        <b-col md="8" class="pe-md-3">
+        <b-col md="8" class="pr-md-3">
           <SingleProject
             v-for="(project, index) in projects"
             :key="index"
