@@ -41,7 +41,9 @@ export default {
 
   modules: [ "bootstrap-vue/nuxt", "@nuxtjs/axios" ],
 
-  axios: {},
+  axios: {
+    retry: true,
+  },
 
   build: {},
 
