@@ -27,7 +27,7 @@ export default {
     ],
   },
 
-  css: [],
+  css: ["@/assets/scss/custom.scss"],
 
   plugins: [],
 
@@ -44,6 +44,24 @@ export default {
   axios: {},
 
   build: {},
+
+  bootstrapVue: {
+    bootstrapCSS: false,
+    bootstrapVueCSS: false,
+    icons: false,
+    componentPlugins: ["LayoutPlugin"],
+    components: [
+      "BContainer",
+      "BRow",
+      "BCol",
+      "BButton",
+      "BAlert",
+      "BImgLazy",
+      "BLink",
+    ],
+    directivePlugins: [],
+    directives: [],
+  },
 
   fontawesome: {
     icons: {
