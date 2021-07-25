@@ -21,22 +21,35 @@
         <b-col md="4">
           <b-img-lazy
             fluid-grow
-            src="https://dummyimage.com/400x200/fa/00"
+            src="https://dummyimage.com/545x275/fa/00"
             blank-color="#777"
             alt="Dummy image"
-            class="d-inline-block d-md-none"
+            class="d-inline-block d-sm-none"
           />
           <b-img-lazy
             fluid-grow
-            src="https://dummyimage.com/400x800/fa/00"
+            src="https://dummyimage.com/510x255/fa/00"
+            blank-color="#777"
+            alt="Dummy image"
+            class="d-none d-sm-inline-block d-md-none"
+          />
+          <b-img-lazy
+            fluid-grow
+            src="https://dummyimage.com/230x460/fa/00"
             alt="Dummy image"
             class="d-none d-md-inline-block d-lg-none"
           />
           <b-img-lazy
             fluid-grow
-            src="https://dummyimage.com/400x700/fa/00"
+            src="https://dummyimage.com/310x540/fa/00"
             alt="Dummy image"
-            class="d-none d-lg-inline-block"
+            class="d-none d-lg-inline-block d-xl-none"
+          />
+          <b-img-lazy
+            fluid-grow
+            src="https://dummyimage.com/370x645/fa/00"
+            alt="Dummy image"
+            class="d-none d-xl-inline-block"
           />
         </b-col>
       </b-row>
