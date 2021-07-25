@@ -21,7 +21,13 @@ export default {
       { name: "format-detection", content: "telephone=no" },
     ],
     link: [
-      { rel: "icon", type: "image/x-icon", href: "/favicon.ico" },
+      {
+        rel: "shortcut icon",
+        type: "image/png",
+        href: "/icon-x192.png",
+        sizes: "192x192",
+      },
+      { rel: "apple-touch-icon", href: "/icon-x180.png", sizes: "180x180" },
       { rel: "preconnect", href: "https://i.imgur.com", crossorigin: true },
       { rel: "dns-prefetch", href: "https://i.imgur.com", crossorigin: true },
     ],
