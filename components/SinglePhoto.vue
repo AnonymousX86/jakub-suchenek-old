@@ -2,7 +2,7 @@
   <b-col lg="6" xl="4">
     <div class="mb-2 image-wrapper">
       <b-img-lazy
-        fluid
+        fluid-grow
         :src="photo.thumbnail"
         blank-color="#777"
         :alt="photo.description"

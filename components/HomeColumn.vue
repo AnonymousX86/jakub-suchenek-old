@@ -4,7 +4,7 @@
     <div :id="'img-container-' + image.id" class="img-container">
       <b-img-lazy
         :id="'home-img-' + image.id"
-        fluid
+        fluid-grow
         :src="image.link"
         :alt="image.alt"
         blank-color="#777"

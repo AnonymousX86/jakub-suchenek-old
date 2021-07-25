@@ -20,21 +20,21 @@
         </b-col>
         <b-col md="4">
           <b-img-lazy
-            fluid
-            src="https://dummyimage.com/600x300/fa/00"
+            fluid-grow
+            src="https://dummyimage.com/400x200/fa/00"
             blank-color="#777"
             alt="Dummy image"
             class="d-inline-block d-md-none"
           />
           <b-img-lazy
-            fluid
-            src="https://dummyimage.com/600x1200/fa/00"
+            fluid-grow
+            src="https://dummyimage.com/400x800/fa/00"
             alt="Dummy image"
             class="d-none d-md-inline-block d-lg-none"
           />
           <b-img-lazy
-            fluid
-            src="https://dummyimage.com/600x800/fa/00"
+            fluid-grow
+            src="https://dummyimage.com/400x700/fa/00"
             alt="Dummy image"
             class="d-none d-lg-inline-block"
           />

@@ -68,7 +68,7 @@ export default Vue.extend({
           const photo: Photo = {
             description: el.description,
             link: el.link,
-            thumbnail: `https://i.imgur.com/${el.id}l.webp`,
+            thumbnail: `https://i.imgur.com/${el.id}m.webp`,
             width: el.width,
             height: el.height,
           }
