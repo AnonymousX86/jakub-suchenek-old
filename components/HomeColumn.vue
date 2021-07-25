@@ -35,80 +35,21 @@ export default Vue.extend({
       },
     },
   },
-  mounted() {
-    const { id } = this.$props.image
-    const container = document.getElementById("img-container-" + id)
-    const innerImage = document.getElementById("home-img-" + id)
-
-    const onMouseEnterHandler = function (event: MouseEvent) {
-      update(event)
-    }
-
-    const onMouseLeaveHandler = function () {
-      if (!innerImage) return
-      innerImage.style.transform = "none"
-    }
-
-    const onMouseMoveHandler = function (event: MouseEvent) {
-      if (isTimeToUpdate()) update(event)
-    }
-
-    if (container) {
-      container.onmouseenter = onMouseEnterHandler
-      container.onmouseleave = onMouseLeaveHandler
-      container.onmousemove = onMouseMoveHandler
-    }
-
-    let counter = 0
-    const updateRate = 10
-    const isTimeToUpdate = function () {
-      return counter++ % updateRate === 0
-    }
-
-    const mouse = {
-      _x: 0,
-      _y: 0,
-      x: 0,
-      y: 0,
-      updatePosition(event: MouseEvent) {
-        this.x = event.clientX - this._x
-        this.y = (event.clientY - this._y) * -1
-      },
-      setOrigin(e: HTMLElement | null) {
-        if (!e) return
-        this._x = e.getBoundingClientRect().left + Math.floor(e.offsetWidth / 2)
-        this._y = e.getBoundingClientRect().bottom + Math.floor(e.offsetHeight)
-      },
-    }
-
-    mouse.setOrigin(container)
-
-    const update = function (event: MouseEvent) {
-      if (!innerImage) return
-      mouse.updatePosition(event)
-      updateTransformStyle(
-        (mouse.y / innerImage.offsetHeight).toFixed(2),
-        (mouse.x / innerImage.offsetWidth).toFixed(2)
-      )
-    }
-
-    const updateTransformStyle = function (
-      x: number | string,
-      y: number | string
-    ) {
-      if (!innerImage) return
-      innerImage.style.transform = "rotateX(" + x + "deg) rotateY(" + y + "deg)"
-    }
-  },
 })
 </script>
 
 <style lang="scss" scoped>
-.img-container {
-  perspective: 30px;
+@media (prefers-reduced-motion: no-preference) {
+  .img-container {
+    perspective: 30px;
 
-  img {
-    transition: transform 0.3s;
+    img {
+      transition: transform 0.3s;
+    }
+
+    &:hover > img {
+      transform: rotateY(-0.5deg);
+    }
   }
 }
 </style>
