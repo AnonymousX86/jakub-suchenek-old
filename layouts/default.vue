@@ -1,9 +1,9 @@
 <template>
-  <div class="container">
+  <b-container>
     <TheNavigation />
-    <Nuxt keep-alive class="text-start" />
+    <Nuxt keep-alive class="text-left" />
     <TheFooter />
-  </div>
+  </b-container>
 </template>
 
 <script>
@@ -12,36 +12,42 @@ export default {
 }
 </script>
 
-<style lang="sass">
-@import "~assets/sass/colors"
+<style lang="scss">
+@use "~assets/scss/colors";
 
-body
-  background-color: $light
-  color: #121212
-  font-weight: 400
-  font-family: "Montserrat", sans-serif
-  text-align: center
+body {
+  background-color: colors.$light;
+  color: #121212;
+  font-weight: 400;
+  font-family: "Montserrat", sans-serif;
+  text-align: center;
+}
 
-@media (prefers-color-scheme: dark)
-  body
-    background-color: #121212
-    color: #cccccc
+@media (prefers-color-scheme: dark) {
+  body {
+    background-color: #121212;
+    color: #cccccc;
+  }
+}
+h2:first-letter {
+  font-weight: 900;
+  color: colors.$primary;
+}
 
-h2:first-letter
-  font-weight: 900
-  color: $primary
-
-h1
-  font-weight: 900
-  letter-spacing: 0.2rem
+h1 {
+  font-weight: 900;
+  letter-spacing: 0.2rem;
+}
 
 h2,
-h3
-  font-weight: 700
-  letter-spacing: 0.1rem
+h3 {
+  font-weight: 700;
+  letter-spacing: 0.1rem;
+}
 
 h4,
 h5,
-b
-  font-weight: 600
+b {
+  font-weight: 600;
+}
 </style>

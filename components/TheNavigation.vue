@@ -26,35 +26,45 @@ export default Vue.extend({
 })
 </script>
 
-<style lang="sass" scoped>
-@import "~assets/sass/colors"
-@import "~assets/sass/hr-border"
+<style lang="scss" scoped>
+@use "~assets/scss/hr-border" as border;
 
-#nav
-  border-bottom: $dark-border
+@use "~assets/scss/colors" as colors;
 
-  .link
-    display: block
-    color: #cccccc
-    text-decoration: none
-    text-align: center
+#nav {
+  border-bottom: border.$dark-border;
 
-    & > div
-      padding: 8px 0
-      background-color: $dark
-      transition: all 0.4s ease-in-out 0.04s
+  .link {
+    display: block;
+    color: #cccccc;
+    text-decoration: none;
+    text-align: center;
 
-      &:hover
-        text-shadow: 0 0 4px #cccccc
-        transition-duration: 0.2s
+    & > div {
+      padding: 8px 0;
+      background-color: colors.$dark;
+      transition: all 0.4s ease-in-out 0.04s;
 
-    &.nuxt-link-exact-active > div
-      background-color: $primary
-      color: #121212
-      &:hover
-        text-shadow: none
+      &:hover {
+        text-shadow: 0 0 4px #cccccc;
+        transition-duration: 0.2s;
+      }
+    }
 
-@media (prefers-color-scheme: dark)
-  #nav
-    border-bottom: $light-border
+    &.nuxt-link-exact-active > div {
+      background-color: colors.$primary;
+      color: #121212;
+
+      &:hover {
+        text-shadow: none;
+      }
+    }
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  #nav {
+    border-bottom: border.$light-border;
+  }
+}
 </style>

@@ -7,11 +7,8 @@ export interface HomeImage {
 }
 
 export interface Photo {
+  readonly id: string
   readonly description: string
-  readonly link: string
-  readonly thumbnail: string
-  readonly width: number
-  readonly height: number
 }
 
 export interface Project {

@@ -3,13 +3,13 @@
     <h3 class="mb-1">{{ info.name }}</h3>
     <p class="text-muted mb-0">
       <!--suppress HtmlUnknownTag -->
-      <font-awesome-icon :icon="info.icon" class="me-1" />
+      <font-awesome-icon :icon="info.icon" class="mr-1" />
       {{ info.technology }}
     </p>
     <p class="mb-1">{{ info.description }}</p>
     <b-button v-if="info.link" :href="info.link" class="rounded-pill px-4">
       <!--suppress HtmlUnknownTag -->
-      <font-awesome-icon :icon="['fas', 'external-link-alt']" class="me-1" />
+      <font-awesome-icon :icon="['fas', 'external-link-alt']" class="mr-1" />
       Check out
     </b-button>
   </b-col>
@@ -39,11 +39,12 @@ export default Vue.extend({
 })
 </script>
 
-<style lang="sass" scoped>
-@import "~assets/sass/colors"
+<style lang="scss" scoped>
+@use "~assets/scss/colors";
 
-.project
-  border-left: solid $accent 5px
-  background-color: #fafafa
-  color: #121212
+.project {
+  border-left: solid colors.$accent 5px;
+  background-color: #fafafa;
+  color: #121212;
+}
 </style>

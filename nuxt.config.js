@@ -9,7 +9,9 @@ export default {
       { name: "viewport", content: "width=device-width, initial-scale=1" },
       { name: "author", content: "Jakub Suchenek" },
       { name: "owner", content: "Jakub Suchenek" },
+      { name: "copyright", content: "Jakub Suchenek" },
       { name: "reply-to", content: "jakub.suchenek.25@gmail.com" },
+      { name: "application-name", content: "Jakub Suchenek portfolio" },
       {
         hid: "description",
         name: "description",
@@ -21,13 +23,30 @@ export default {
       { name: "format-detection", content: "telephone=no" },
     ],
     link: [
-      { rel: "icon", type: "image/x-icon", href: "/favicon.ico" },
+      {
+        rel: "shortcut icon",
+        type: "image/png",
+        href: "/icon-x192.png",
+        sizes: "192x192",
+      },
+      { rel: "apple-touch-icon", href: "/icon-x180.png", sizes: "180x180" },
       { rel: "preconnect", href: "https://i.imgur.com", crossorigin: true },
       { rel: "dns-prefetch", href: "https://i.imgur.com", crossorigin: true },
     ],
   },
 
-  css: [],
+  css: ["@/assets/scss/custom.scss"],
+
+  loading: {
+    color: "#3AAFA9",
+    height: "5px",
+  },
+
+  loadingIndicator: {
+    name: "circle",
+    color: "#3AAFA9",
+    background: "#CCCCCC",
+  },
 
   plugins: [],
 
@@ -41,9 +60,29 @@ export default {
 
   modules: [ "bootstrap-vue/nuxt", "@nuxtjs/axios" ],
 
-  axios: {},
+  axios: {
+    retry: true,
+  },
 
   build: {},
+
+  bootstrapVue: {
+    bootstrapCSS: false,
+    bootstrapVueCSS: false,
+    icons: false,
+    componentPlugins: ["LayoutPlugin"],
+    components: [
+      "BContainer",
+      "BRow",
+      "BCol",
+      "BButton",
+      "BAlert",
+      "BImgLazy",
+      "BLink",
+    ],
+    directivePlugins: [],
+    directives: [],
+  },
 
   fontawesome: {
     icons: {

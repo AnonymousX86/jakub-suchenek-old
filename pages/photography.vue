@@ -22,7 +22,7 @@
       </p>
       <b-button :href="$config.baseUrl + $route.path">
         <!--suppress HtmlUnknownTag -->
-        <font-awesome-icon :icon="refreshIcon" class="me-1" />
+        <font-awesome-icon :icon="refreshIcon" class="mr-1" />
         Refresh now
       </b-button>
     </b-col>
@@ -66,11 +66,8 @@ export default Vue.extend({
       if (res.data) {
         res.data.forEach((el: ImgurResponseData) => {
           const photo: Photo = {
+            id: el.id,
             description: el.description,
-            link: el.link,
-            thumbnail: `https://i.imgur.com/${el.id}l.webp`,
-            width: el.width,
-            height: el.height,
           }
           this.addPhoto(photo)
         })
@@ -96,4 +93,4 @@ export default Vue.extend({
 })
 </script>
 
-<style lang="sass" scoped></style>
+<style lang="scss" scoped></style>
