@@ -66,11 +66,8 @@ export default Vue.extend({
       if (res.data) {
         res.data.forEach((el: ImgurResponseData) => {
           const photo: Photo = {
+            id: el.id,
             description: el.description,
-            link: el.link,
-            thumbnail: `https://i.imgur.com/${el.id}m.webp`,
-            width: el.width,
-            height: el.height,
           }
           this.addPhoto(photo)
         })

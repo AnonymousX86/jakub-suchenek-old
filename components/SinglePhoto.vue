@@ -1,15 +1,15 @@
 <template>
   <b-col lg="6" xl="4">
-    <div class="mb-2 image-wrapper">
+    <div class="mb-4 px-3 image-wrapper">
       <b-img-lazy
         fluid-grow
-        :src="photo.thumbnail"
+        :src="`https://i.imgur.com/${photo.id}m.webp`"
         blank-color="#777"
         :alt="photo.description"
         :title="photo.description"
       />
       <p class="expand-icon">
-        <a :href="photo.link">
+        <a :href="`${$config.baseUrl}/photo/${photo.id}`">
           <!--suppress HtmlUnknownTag -->
           <font-awesome-icon :icon="previewIcon" />
         </a>
@@ -30,10 +30,8 @@ export default Vue.extend({
       type: Object as () => Photo,
       default() {
         return {
+          id: "",
           description: "",
-          link: "",
-          thumbnail: "",
-          sizes: [ 0, 0 ],
         }
       },
     },
