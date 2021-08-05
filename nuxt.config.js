@@ -87,7 +87,7 @@ export default {
   fontawesome: {
     icons: {
       regular: ["faQuestionCircle"],
-      solid: [ "faCoffee", "faExpand", "faSyncAlt", "faExternalLinkAlt" ],
+      solid: [ "faCoffee", "faExpand", "faSyncAlt" ],
       brands: [ "faGithub", "faInstagram", "faVuejs", "faJs" ],
     },
   },
