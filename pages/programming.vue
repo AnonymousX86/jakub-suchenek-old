@@ -71,12 +71,14 @@ export default Vue.extend({
         description: "You're currently browsing it!",
         technology: "Nuxt.js",
         icon: [ "fab", "vuejs" ],
+        link: "https://github.com/AnonymousX86/jakub-suchenek",
       },
       {
         name: "Caesar cipher",
         description: "Most popular cipher system made online.",
         technology: "JavaScript",
         icon: [ "fab", "js" ],
+        link: "https://github.com/AnonymousX86/caesar-cipher",
       },
       {
         name: "Database generator",
@@ -84,6 +86,7 @@ export default Vue.extend({
           "School project about generating lots of data for SQL practice.",
         technology: "Vue.js + PHP",
         icon: [ "fab", "vuejs" ],
+        link: "https://github.com/AnonymousX86/database-generator",
       },
     ]
 
