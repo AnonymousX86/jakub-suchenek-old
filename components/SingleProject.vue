@@ -11,7 +11,13 @@
         <p class="mb-1">{{ info.description }}</p>
       </b-col>
       <b-col class="mt-4">
-        <b-button v-if="info.link" :href="info.link" class="rounded-pill px-4 w-100 github-link">
+        <b-button
+          v-if="info.link"
+          :href="info.link"
+          class="rounded-pill px-4 w-100 github-link"
+          target="_blank"
+          rel="noreferrer noopener"
+        >
           <!--suppress HtmlUnknownTag -->
           <font-awesome-icon :icon="['fab', 'github']" class="mr-1" />
           Source code
