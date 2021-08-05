@@ -13,7 +13,7 @@
     "heroku-postbuild": "npm run migrator"
   },
   "dependencies": {
-    "@fortawesome/free-brands-svg-icons": "^5.15.3",
+    "@fortawesome/free-brands-svg-icons": "^5.15.4",
     "@fortawesome/free-regular-svg-icons": "^5.15.3",
     "@fortawesome/free-solid-svg-icons": "^5.15.3",
     "@nuxt/types": "^2.15.7",
