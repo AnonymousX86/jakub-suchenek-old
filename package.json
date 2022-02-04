@@ -37,6 +37,6 @@
     "eslint-plugin-nuxt": "^2.0.0",
     "eslint-plugin-vue": "^8.4.0",
     "prettier": "^2.5.1",
-    "sass-migrator": "^1.5.2"
+    "sass-migrator": "^1.5.4"
   }
 }
