@@ -4,8 +4,6 @@
       <b-col cols="8">
         <h3 class="mb-1">{{ info.name }}</h3>
         <p class="text-muted mb-0">
-          <!--suppress HtmlUnknownTag -->
-          <font-awesome-icon :icon="info.icon" class="mr-1" />
           {{ info.technology }}
         </p>
         <p class="mb-1">{{ info.description }}</p>
@@ -18,8 +16,6 @@
           target="_blank"
           rel="noreferrer noopener"
         >
-          <!--suppress HtmlUnknownTag -->
-          <font-awesome-icon :icon="['fab', 'github']" class="mr-1" />
           Source code
         </b-button>
       </b-col>

@@ -2,10 +2,7 @@
   <b-row id="footer" class="no-gutters my-3 pt-3">
     <b-col md="6" class="text-left pb-3 pb-md-0">
       <span v-for="link in links" :key="link.id" class="mr-4">
-        <a :href="link.href">
-          <!--suppress HtmlUnknownTag -->
-          <font-awesome-icon :icon="link.icon" class="mr-1" /> {{ link.name }}
-        </a>
+        <a :href="link.href" />
       </span>
     </b-col>
     <b-col md="6" class="text-right">

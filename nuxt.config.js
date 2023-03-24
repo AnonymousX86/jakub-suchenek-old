@@ -52,11 +52,7 @@ export default {
 
   components: true,
 
-  buildModules: [
-    "@nuxt/typescript-build",
-    "@nuxtjs/fontawesome",
-    "@nuxtjs/google-fonts",
-  ],
+  buildModules: ["@nuxt/typescript-build"],
 
   modules: [ "bootstrap-vue/nuxt", "@nuxtjs/axios" ],
 
@@ -64,13 +60,17 @@ export default {
     retry: { retries: 5 },
   },
 
-  build: {},
+  build: {
+    babel: {
+      compact: true,
+    },
+  },
 
   bootstrapVue: {
     bootstrapCSS: false,
     bootstrapVueCSS: false,
     icons: false,
-    componentPlugins: ["LayoutPlugin"],
+    componentPlugins: [],
     components: [
       "BContainer",
       "BRow",
@@ -82,19 +82,6 @@ export default {
     ],
     directivePlugins: [],
     directives: [],
-  },
-
-  fontawesome: {
-    icons: {
-      regular: ["faQuestionCircle"],
-      solid: [ "faCoffee", "faExpand", "faSyncAlt" ],
-      brands: [ "faGithub", "faInstagram", "faVuejs", "faJs" ],
-    },
-  },
-
-  googleFonts: {
-    families: { Montserrat: [ 400, 600, 700, 900 ]},
-    display: "swap",
   },
 
   privateRuntimeConfig: {

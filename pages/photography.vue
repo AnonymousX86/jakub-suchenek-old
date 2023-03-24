@@ -21,8 +21,6 @@
         minutes.
       </p>
       <b-button :href="$config.baseUrl + $route.path">
-        <!--suppress HtmlUnknownTag -->
-        <font-awesome-icon :icon="refreshIcon" class="mr-1" />
         Refresh now
       </b-button>
     </b-col>

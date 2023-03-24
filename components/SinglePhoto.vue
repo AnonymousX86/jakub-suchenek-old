@@ -11,10 +11,7 @@
         :title="photo.description"
       />
       <p class="expand-icon">
-        <nuxt-link :to="`/photo/${photo.id}`">
-          <!--suppress HtmlUnknownTag -->
-          <font-awesome-icon :icon="previewIcon" />
-        </nuxt-link>
+        <nuxt-link :to="`/photo/${photo.id}`" />
       </p>
     </div>
   </b-col>
