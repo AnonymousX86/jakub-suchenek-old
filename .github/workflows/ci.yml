@@ -38,17 +38,17 @@ jobs:
             ${{ runner.os }}-node-
 
       - name: Install dependencies 👨🏻‍💻
-        uses: borales/actions-yarn@v3.0.0
+        uses: borales/actions-yarn@v4.2.0
         with:
           cmd: install
 
       - name: Build 🛠️
-        uses: borales/actions-yarn@v3.0.0
+        uses: borales/actions-yarn@v4.2.0
         with:
           cmd: build
 
       - name: Run linter 👀
-        uses: borales/actions-yarn@v3.0.0
+        uses: borales/actions-yarn@v4.2.0
         with:
           cmd: lint
 
