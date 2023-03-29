@@ -42,6 +42,6 @@
     "sass-migrator": "^1.5.1",
     "ts-loader": "^8.4.0",
     "typescript": ">=2.8.0",
-    "webpack": "^4.27.0"
+    "webpack": "^5.76.3"
   }
 }
