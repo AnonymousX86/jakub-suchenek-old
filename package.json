@@ -25,6 +25,7 @@
     "nuxt": "^2.15.7",
     "popper.js": "^1.16.1",
     "sass": "^1.37.5",
+    "scss-tokenizer": "^0.4.3",
     "vue": "^2.7.14"
   },
   "devDependencies": {
